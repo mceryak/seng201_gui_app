@@ -1,6 +1,7 @@
 package tests;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -10,13 +11,19 @@ import java.util.HashMap;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import crew_member_types.Barter;
+import crew_member_types.Chef;
+import crew_member_types.Juggernaut;
 import crew_member_types.Medic;
+import crew_member_types.Pilot;
+import crew_member_types.Pioneer;
 import food_items.MemberBerries;
 import food_items.SaltyChocolateBalls;
 import food_items.TenormanChili;
 import food_items.Thwizlers;
 import game_objects.Crew;
 import game_objects.FoodItem;
+import game_objects.crew_member.CrewMember;
 import medical_items.MedPack_Small;
 import medical_items.SpacePlagueCure;
 
@@ -50,6 +57,53 @@ class CrewTest {
 		crew.getInventory().modifyCCAmount(-20);
 		after = crew.getInventory().getCCAmount();
 		assertEquals(before - 20, after);
+	}
+
+	@Test
+	void testGetAbilityIdentifiers() {
+		CrewMember c1 = new Pioneer("Joe");
+		CrewMember c2 = new Juggernaut("Eric");
+		CrewMember c3 = new Barter("kyle");
+		CrewMember c4 = new Chef("chef");
+		crew.addCrewMember(c1, Pioneer.abilityIdentifier);
+		crew.addCrewMember(c2, Juggernaut.abilityIdentifier);
+		crew.addCrewMember(c3, Barter.abilityIdentifier);
+		crew.addCrewMember(c4, Chef.abilityIdentifier);
+		assertEquals(4, crew.getAbilityIdentifiers().size());
+		assertTrue(crew.getAbilityIdentifiers().contains(Pioneer.abilityIdentifier));
+		assertTrue(crew.getAbilityIdentifiers().contains(Juggernaut.abilityIdentifier));
+		assertTrue(crew.getAbilityIdentifiers().contains(Barter.abilityIdentifier));
+		assertTrue(crew.getAbilityIdentifiers().contains(Chef.abilityIdentifier));
+		assertFalse(crew.getAbilityIdentifiers().contains(Medic.abilityIdentifier));
+		assertFalse(crew.getAbilityIdentifiers().contains(Pilot.abilityIdentifier));
+		crew.killCrewMember(c3);
+		assertFalse(crew.getAbilityIdentifiers().contains(Barter.abilityIdentifier));
+	}
+
+	@Test
+	void testNumAlive() {
+		CrewMember c1 = new Pioneer("Joe");
+		CrewMember c2 = new Juggernaut("Eric");
+		CrewMember c3 = new Barter("kyle");
+		CrewMember c4 = new Chef("chef");
+		crew.addCrewMember(c1, Pioneer.abilityIdentifier);
+		crew.addCrewMember(c2, Juggernaut.abilityIdentifier);
+		crew.addCrewMember(c3, Barter.abilityIdentifier);
+		crew.addCrewMember(c4, Chef.abilityIdentifier);
+		assertEquals(4, crew.numAlive());
+		crew.killCrewMember(c2);
+		assertEquals(3, crew.numAlive());
+		crew.killCrewMember(c4);
+		assertEquals(2, crew.numAlive());
+		crew.killCrewMember(c1);
+		assertEquals(1, crew.numAlive());
+		for (CrewMember cm : crew.getCrewMembers().keySet())
+			if (cm.getName() == "kyle")
+				assertTrue(crew.getCrewMembers().get(cm));
+			else
+				assertFalse(crew.getCrewMembers().get(cm));
+		crew.killCrewMember(c3);
+		assertEquals(0, crew.numAlive());
 	}
 
 	@Test

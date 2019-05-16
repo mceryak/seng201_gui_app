@@ -22,7 +22,7 @@ class SpacePlagueTest {
 	@Test
 	void testGetSick() {
 
-		for (int i = 0; i < 1000; i++) {
+		for (int i = 0; i < 100; i++) {
 			crew = new Crew("crew-name", "ship-name", 3);
 			crew.addCrewMember(new Medic("Joey"), Medic.abilityIdentifier);
 			crew.addCrewMember(new Medic("Beth"), Medic.abilityIdentifier);
@@ -33,7 +33,7 @@ class SpacePlagueTest {
 			assertTrue(numSickActual > 0);
 		}
 
-		for (int i = 0; i < 1000; i++) {
+		for (int i = 0; i < 100; i++) {
 			crew = new Crew("crew-name", "ship-name", 3);
 			crew.addCrewMember(new Medic("Joey"), Medic.abilityIdentifier);
 			crew.addCrewMember(new Medic("Beth"), Medic.abilityIdentifier);
@@ -43,7 +43,7 @@ class SpacePlagueTest {
 			assertTrue(numSickActual > 0);
 		}
 
-		for (int i = 0; i < 1000; i++) {
+		for (int i = 0; i < 100; i++) {
 			crew = new Crew("crew-name", "ship-name", 3);
 			crew.addCrewMember(new Medic("Joey"), Medic.abilityIdentifier);
 			crew.addCrewMember(new Medic("Beth"), Medic.abilityIdentifier);

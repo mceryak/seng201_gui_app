@@ -1,6 +1,8 @@
 package tests;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
@@ -28,6 +30,18 @@ class MedicalItemsTest {
 		assertEquals(20, m1.getPrice());
 		assertEquals(40, m1.getHealthRestore());
 		assertFalse(m1.curesSpacePlague());
+	}
+
+	@Test
+	void testEquals() {
+		MedPack_Large m1 = new MedPack_Large();
+		MedPack_Large m2 = new MedPack_Large();
+		MedPack_Small m3 = new MedPack_Small();
+		MedPack_Small m4 = new MedPack_Small();
+		assertTrue(m1.equals(m2));
+		assertFalse(m1.equals(m3));
+		assertFalse(m2.equals(m3));
+		assertTrue(m3.equals(m4));
 	}
 
 	@Test
