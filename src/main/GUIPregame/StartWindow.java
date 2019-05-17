@@ -70,9 +70,11 @@ public class StartWindow {
 
 		// south park logo
 
-		JLabel logo = new JLabel("");
-		logo.setIcon(new ImageIcon(StartWindow.class.getResource("/images_sp/logo_400x476px.png")));
-		logo.setBounds(frame.getWidth() / 2 - 200, frame.getHeight() / 5, 400, 476);
+		JLabel logo = new JLabel("SOUTH PARK");
+		logo.setFont(new Font("Krungthep", Font.PLAIN, 40));
+		logo.setForeground(new Color(255, 255, 255));
+//		logo.setIcon(new ImageIcon(StartWindow.class.getResource("/images_sp/logo_400x476px.png")));
+		logo.setBounds(frame.getWidth() / 2 - 115, frame.getHeight() / 5, 400, 476);
 		frame.getContentPane().add(logo);
 
 		// start game button

@@ -157,7 +157,7 @@ public class DayWindow {
 						StoryLine.updateLabel("You're out of time");
 					else
 						StoryLine.updateLabel("Your ship has been completely destroyed");
-					gameOverScreen.render(curDay, lastDay, crew);
+					gameOverScreen.render(curDay - 1, lastDay, crew);
 				} else
 					finishedWindow();
 			}
