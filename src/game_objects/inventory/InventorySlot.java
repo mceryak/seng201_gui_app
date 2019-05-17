@@ -55,7 +55,7 @@ public class InventorySlot {
 	public InventorySlot(boolean isCartmanCoin) {
 
 		useItemLbl = new JLabel("Use Item");
-		useItemLbl.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
+		useItemLbl.setFont(new Font("Lucida Grande", Font.PLAIN, 11));
 		actionAvailable = false;
 
 		item = null; // not representing any item when first initialized
