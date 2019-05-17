@@ -79,7 +79,7 @@ public class StartWindow {
 
 		// start game button
 
-		JButton startGameButton = new JButton("START GAME");
+		JButton startGameButton = new JButton("START");
 		startGameButton.setBounds(frame.getWidth() / 2 - 58, frame.getHeight() - 140, 117, 29);
 		startGameButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

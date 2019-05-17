@@ -11,6 +11,7 @@ import game_objects.actions.UseItem;
 import main.GUIGame.DayWindow;
 import main.GUIPregame.DaysNameSizeWindow;
 import main.GUIPregame.PickCrewMembersWindow;
+import main.GUIPregame.RulesWindow;
 import main.GUIPregame.StartWindow;
 
 /**

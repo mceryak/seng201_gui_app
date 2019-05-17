@@ -308,9 +308,10 @@ public class PickCrewMembersWindow {
 
 			// remove button shown when crew member is visible in this spot
 			JButton btnRemove = new JButton("Remove");
+			btnRemove.setFont(new Font("Lucida Grande", Font.PLAIN, 11));
 			removeSpots[i] = btnRemove;
 			btnRemove.addActionListener(removeButtonsActionListener(i + 1));
-			btnRemove.setBounds(82 + i * 112, 158, 120, 16);
+			btnRemove.setBounds(82 + i * 112, 158, 71, 16);
 			btnRemove.setVisible(false);
 			frame.getContentPane().add(btnRemove);
 		}

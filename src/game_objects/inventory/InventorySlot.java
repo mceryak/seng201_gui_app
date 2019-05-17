@@ -105,7 +105,7 @@ public class InventorySlot {
 		slot.setBounds(x, y, 54, 52);
 		lblName.setBounds(x, y + 60, 110, 17);
 		pnlName.setBounds(x, y + 60, 110, 17);
-		useItemLbl.setBounds(x, y + 70, 57, 15);
+		useItemLbl.setBounds(x, y + 70, 70, 15);
 		lblQuantity.setBounds(x + 50, y + 45, 20, 15);
 		satisfaction.setBounds(x, y + 75, 90, 14);
 	}
