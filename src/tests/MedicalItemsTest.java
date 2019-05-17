@@ -20,6 +20,7 @@ class MedicalItemsTest {
 		assertEquals(10, m1.getPrice());
 		assertEquals(15, m1.getHealthRestore());
 		assertFalse(m1.curesSpacePlague());
+		assertEquals(15, m1.getValue());
 	}
 
 	@Test
@@ -30,6 +31,7 @@ class MedicalItemsTest {
 		assertEquals(20, m1.getPrice());
 		assertEquals(40, m1.getHealthRestore());
 		assertFalse(m1.curesSpacePlague());
+		assertEquals(40, m1.getValue());
 	}
 
 	@Test
@@ -52,6 +54,7 @@ class MedicalItemsTest {
 		assertEquals(15, m1.getPrice());
 		assertEquals(5, m1.getHealthRestore());
 		assertTrue(m1.curesSpacePlague());
+		assertEquals(5, m1.getValue());
 	}
 
 }

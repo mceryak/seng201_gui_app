@@ -21,6 +21,7 @@ class FoodTest {
 		assertEquals(20, t1.getPrice());
 		assertEquals(40, t1.getNutrition());
 		assertEquals(5, t1.getRarity());
+		assertEquals(40, t1.getValue());
 	}
 
 	@Test
@@ -31,6 +32,7 @@ class FoodTest {
 		assertEquals(10, f1.getPrice());
 		assertEquals(20, f1.getNutrition());
 		assertEquals(10, f1.getRarity());
+		assertEquals(20, f1.getValue());
 	}
 
 	@Test
@@ -41,6 +43,7 @@ class FoodTest {
 		assertEquals(40, t1.getPrice());
 		assertEquals(80, t1.getNutrition());
 		assertEquals(5, t1.getRarity());
+		assertEquals(80, t1.getValue());
 	}
 
 	@Test
@@ -51,6 +54,7 @@ class FoodTest {
 		assertEquals(5, s1.getPrice());
 		assertEquals(20, s1.getNutrition());
 		assertEquals(2, s1.getRarity());
+		assertEquals(20, s1.getValue());
 	}
 
 	@Test
@@ -61,6 +65,7 @@ class FoodTest {
 		assertEquals(2, c1.getPrice());
 		assertEquals(3, c1.getNutrition());
 		assertEquals(10, c1.getRarity());
+		assertEquals(3, c1.getValue());
 	}
 
 	@Test
@@ -71,6 +76,7 @@ class FoodTest {
 		assertEquals(15, c1.getPrice());
 		assertEquals(30, c1.getNutrition());
 		assertEquals(5, c1.getRarity());
+		assertEquals(30, c1.getValue());
 	}
 
 }
