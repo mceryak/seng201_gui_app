@@ -310,7 +310,7 @@ public class PickCrewMembersWindow {
 			JButton btnRemove = new JButton("Remove");
 			removeSpots[i] = btnRemove;
 			btnRemove.addActionListener(removeButtonsActionListener(i + 1));
-			btnRemove.setBounds(82 + i * 112, 158, 71, 16);
+			btnRemove.setBounds(82 + i * 112, 158, 120, 16);
 			btnRemove.setVisible(false);
 			frame.getContentPane().add(btnRemove);
 		}

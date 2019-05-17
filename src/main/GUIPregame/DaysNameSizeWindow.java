@@ -108,7 +108,7 @@ public class DaysNameSizeWindow {
 	private void setRadioButtons(ButtonGroup numDaysSelector, int start, int end, int x, int y) {
 		for (int i = start; i <= end; i++) {
 			JRadioButton radioButton = new JRadioButton("" + i);
-			radioButton.setForeground(Color.WHITE);
+			radioButton.setForeground(new Color(160, 160, 160));
 			radioButton.setBounds(x, y, 141, 16);
 			numDaysSelector.add(radioButton);
 			frame.getContentPane().add(radioButton);

@@ -1,6 +1,7 @@
 package main.GUIGame;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.util.concurrent.ExecutionException;
 
 import javax.swing.JFrame;
@@ -47,11 +48,13 @@ public class StoryLine {
 		border.add(container);
 
 		line1 = new JLabel("It's a new day. Make the most of it.");
+		line1.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
 		line1.setForeground(new Color(255, 255, 255));
-		line1.setBounds(170, frame.getHeight() - 105, 350, 12);
+		line1.setBounds(170, frame.getHeight() - 105, 350, 17);
 		line2 = new JLabel("");
+		line2.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
 		line2.setForeground(new Color(255, 255, 255));
-		line2.setBounds(170, frame.getHeight() - 82, 350, 12);
+		line2.setBounds(170, frame.getHeight() - 82, 350, 17);
 
 		frame.getContentPane().add(line1);
 		frame.getContentPane().add(line2);

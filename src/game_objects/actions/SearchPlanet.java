@@ -28,7 +28,7 @@ public class SearchPlanet extends Action {
 		super("Search Planet");
 
 		// set location so it is over rubble drawing
-		super.setBounds(680, 547, 90, 20);
+		super.setBounds(680, 547, 140, 20);
 
 		// set crew
 		crew = playersCrew;
