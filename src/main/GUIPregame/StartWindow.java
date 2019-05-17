@@ -103,8 +103,8 @@ public class StartWindow {
 
 		JLabel lblSpaceExplorer = new JLabel("Space Explorer");
 		lblSpaceExplorer.setForeground(new Color(255, 153, 0));
-		lblSpaceExplorer.setBounds(frame.getWidth() / 2 - 280, frame.getHeight() / 36, 560, 60);
-		lblSpaceExplorer.setFont(new Font("Krungthep", Font.BOLD, 69));
+		lblSpaceExplorer.setBounds(frame.getWidth() / 2 - 280, frame.getHeight() / 36, 560, 76);
+		lblSpaceExplorer.setFont(new Font("Krungthep", Font.BOLD, 55));
 		frame.getContentPane().add(lblSpaceExplorer);
 		frame.getContentPane().add(startGameButton);
 
