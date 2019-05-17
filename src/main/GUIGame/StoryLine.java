@@ -48,10 +48,10 @@ public class StoryLine {
 
 		line1 = new JLabel("It's a new day. Make the most of it.");
 		line1.setForeground(new Color(255, 255, 255));
-		line1.setBounds(170, frame.getHeight() - 105, 350, 15);
+		line1.setBounds(170, frame.getHeight() - 105, 350, 12);
 		line2 = new JLabel("");
 		line2.setForeground(new Color(255, 255, 255));
-		line2.setBounds(170, frame.getHeight() - 82, 350, 15);
+		line2.setBounds(170, frame.getHeight() - 82, 350, 12);
 
 		frame.getContentPane().add(line1);
 		frame.getContentPane().add(line2);

@@ -56,7 +56,7 @@ public class GameOver {
 		JLabel lblGameOver = new JLabel("GAME OVER");
 		lblGameOver.setBounds(54, 5, 459, 102);
 		lblGameOver.setForeground(new Color(153, 0, 0));
-		lblGameOver.setFont(new Font("Krungthep", Font.PLAIN, 80));
+		lblGameOver.setFont(new Font("Krungthep", Font.PLAIN, 60));
 		panel.add(lblGameOver);
 
 		lblWL = new JLabel("");
@@ -92,7 +92,7 @@ public class GameOver {
 		// less crew members in crew gives higher score. less dead gives higher score.
 		// more extra days gives higher score. higher shield health gives higher score.
 		int finalScore = didWin
-				? (int) Math.pow(3, (crew.numAlive() + 1) * (4 - crew.getCrewMembers().size() + 1))
+				? (int) Math.pow(3, (crew.numAlive() + 1) * (4 - crew.getCrewMembers().size() + 1) - 1)
 						+ 300 * (totalDays + 1 - daysTaken) + crew.getShip().getShieldHealth()
 				: 0;
 
