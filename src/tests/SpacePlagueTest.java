@@ -1,5 +1,6 @@
 package tests;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -52,6 +53,7 @@ class SpacePlagueTest {
 			assertTrue(numSickActual > 0);
 		}
 	}
+	
 
 	int getActualNumSick(Crew crew) {
 		int numSickActual = 0;
@@ -61,6 +63,13 @@ class SpacePlagueTest {
 			}
 		}
 		return numSickActual;
+	}
+	
+	@Test
+	void noCrewTest() {
+		SpacePlague plague = new SpacePlague();
+		assertEquals(plague.causeChaos(crew), "Space Plague infected your crew over night. Everyone already has the plague anyway. No biggie.");
+		
 	}
 
 }
