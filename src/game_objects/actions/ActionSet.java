@@ -75,6 +75,13 @@ public class ActionSet {
 	}
 
 	/**
+	 * resets action set at end of game
+	 */
+	public void resetActionSet() {
+		single_instance = null;
+	}
+
+	/**
 	 * Add all actions to the current frame so they can be seen
 	 * 
 	 * @param frame Frame to be added on

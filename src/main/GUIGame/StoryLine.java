@@ -77,8 +77,8 @@ public class StoryLine {
 			@Override
 			protected String[] doInBackground() { // run background thread
 				String[] ret = new String[2];
-				if (text.length() > 53) { // split into two strings
-					int index = 53;
+				if (text.length() > 52) { // split into two strings
+					int index = 52;
 					while (text.charAt(--index) != ' ') // find beginning of word
 						;
 					ret[0] = text.substring(0, index + 1); // string 1

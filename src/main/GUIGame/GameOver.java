@@ -87,7 +87,7 @@ public class GameOver {
 		String shipName = crew.getShip().getName();
 
 		// store whether player won in a variable
-		boolean didWin = crew.getShip().getPiecesToFind() == 0;
+		boolean didWin = crew.getShip().getMissingPieces() == 0;
 
 		// less crew members in crew gives higher score. less dead gives higher score.
 		// more extra days gives higher score. higher shield health gives higher score.

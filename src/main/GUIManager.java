@@ -74,7 +74,7 @@ public class GUIManager {
 	 * Launch Rules Window
 	 */
 	public void launchRulesWindow() {
-		RulesWindow rw = new RulesWindow(this);
+		new RulesWindow(this);
 	}
 
 	/**
@@ -169,6 +169,8 @@ public class GUIManager {
 		int gameOver = dw.closeWindow();
 		if (gameOver == 1) { // game is over, player hit play again
 			curDay = 1;
+			crew = null;
+			ActionSet.getInstance().resetActionSet();
 			launchStartWindow();
 		} else // game is not over
 			launchDayWindow();

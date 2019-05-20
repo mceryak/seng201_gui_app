@@ -41,7 +41,7 @@ class CrewTest {
 		assertTrue(crew.getInventory().getFoodItems().isEmpty());
 		assertTrue(crew.getInventory().getMedicalItems().isEmpty());
 		assertTrue(crew.getCrewMembers().isEmpty());
-		assertEquals(3, crew.getShip().getPiecesToFind());
+		assertEquals(3, crew.getShip().getMissingPieces());
 		assertEquals("ship-name", crew.getShip().getName());
 		assertEquals(100, crew.getInventory().getCCAmount());
 		assertEquals("crew-name", crew.getName());

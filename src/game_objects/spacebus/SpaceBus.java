@@ -16,7 +16,7 @@ public class SpaceBus {
 	private int shieldHealth;
 
 	// amount of missing pieces that needs to be found by the player
-	private int piecesToFind;
+	private int missingPieces;
 
 	// name of the space-bus
 	private String name;
@@ -38,7 +38,7 @@ public class SpaceBus {
 
 		this.gui = new SpaceBusGui(piecesToFind, name);
 		this.name = name;
-		this.piecesToFind = piecesToFind;
+		this.missingPieces = piecesToFind;
 		this.shieldHealth = 100;
 
 		repairShip = new Action("Repair Space-bus") {
@@ -82,8 +82,8 @@ public class SpaceBus {
 	/**
 	 * @return number of pieces to player needs to find
 	 */
-	public int getPiecesToFind() {
-		return this.piecesToFind;
+	public int getMissingPieces() {
+		return this.missingPieces;
 	}
 
 	/**
@@ -91,7 +91,7 @@ public class SpaceBus {
 	 */
 	public void findPiece() {
 		gui.findPiece();
-		--this.piecesToFind;
+		--this.missingPieces;
 	}
 
 	/**

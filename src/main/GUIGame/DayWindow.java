@@ -130,7 +130,7 @@ public class DayWindow {
 		btnNextDay.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-				if (crew.getShip().getPiecesToFind() == 0) { // game won
+				if (crew.getShip().getMissingPieces() == 0) { // game won
 					StoryLine.updateLabel("You've found every missing piece. Your crew can now return home!");
 					gameOverScreen.render(curDay, lastDay, crew);
 					return;
