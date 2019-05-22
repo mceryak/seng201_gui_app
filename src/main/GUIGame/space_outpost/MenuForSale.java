@@ -29,6 +29,8 @@ public class MenuForSale {
 
 	/**
 	 * This constructor is called 1 time per day. Quantities of items vary each day.
+	 * 
+	 * @param hasBarter Determines whether there is a barter type in the crew
 	 */
 	public MenuForSale(boolean hasBarter) {
 

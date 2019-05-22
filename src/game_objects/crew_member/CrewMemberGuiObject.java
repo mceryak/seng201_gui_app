@@ -186,6 +186,7 @@ public class CrewMemberGuiObject {
 	 * render everything to do with this crew member (icon, health, hunger ...)
 	 * 
 	 * @param frame JFrame we're rendering to
+	 * @param x     x coordinate to render in relation to
 	 * @param y     Y coordinate to render in relation to
 	 */
 	public void render(JFrame frame, int x, int y) {

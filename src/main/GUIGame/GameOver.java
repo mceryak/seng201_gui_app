@@ -80,6 +80,10 @@ public class GameOver {
 
 	/**
 	 * render game over panel
+	 * 
+	 * @param daysTaken number of days used before game is over
+	 * @param totalDays total number of days player decided to play for
+	 * @param crew      Player's crew
 	 */
 	public void render(int daysTaken, int totalDays, Crew crew) {
 

@@ -16,9 +16,8 @@ public class NewDayEvents {
 	 * Modify all crew members' attributes. Create a random event. Check if any crew
 	 * member has died. If any, report and remove from crew.
 	 * 
-	 * @param crew
+	 * @param crew Player's crew
 	 * @return boolean true if game over, false if game on
-	 * @throws InterruptedException
 	 */
 	public static boolean startDay(Crew crew) {
 

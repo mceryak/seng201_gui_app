@@ -48,7 +48,7 @@ public class EnterNamePanel {
 	/**
 	 * Show/hide this EnterName panel
 	 * 
-	 * @param tf   True -> show. False -> hide
+	 * @param tf   True: show. False: hide
 	 * @param text Set enter name text according to crew member type
 	 */
 	public void showPanel(boolean tf, String text) {

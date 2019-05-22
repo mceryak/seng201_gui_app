@@ -228,7 +228,7 @@ public class PickCrewMembersWindow {
 	/**
 	 * disable pick buttons when enter name panel shows up. enable on close
 	 * 
-	 * @param tf True -> enable. False -> disable
+	 * @param tf True: enable. False: disable
 	 */
 	public void changeStateButtons(boolean tf) {
 		for (JButton button : pickButtons) {

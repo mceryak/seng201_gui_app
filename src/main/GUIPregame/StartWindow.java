@@ -20,11 +20,10 @@ public class StartWindow {
 	// gui controller
 	private GUIManager man;
 
-	// determines next window to open, 0 to start game, 1 for rules
-	private int nextWindow = 0;
-
 	/**
 	 * Constructor for StartWindow
+	 * 
+	 * @param manager GUI controller
 	 */
 	public StartWindow(GUIManager manager) {
 		man = manager;
@@ -40,12 +39,9 @@ public class StartWindow {
 
 	/**
 	 * dispose frame
-	 * 
-	 * @return 0 to start game, 1 to view rules
 	 */
-	public int closeWindow() {
+	public void closeWindow() {
 		frame.dispose();
-		return nextWindow;
 	}
 
 	/**
@@ -86,18 +82,6 @@ public class StartWindow {
 				finishedWindow();
 			}
 		});
-
-		// view rules button
-
-		JButton rulesButton = new JButton("RULES");
-		rulesButton.setBounds(392, 700, 117, 29);
-		rulesButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				nextWindow = 1;
-				finishedWindow();
-			}
-		});
-		frame.getContentPane().add(rulesButton);
 
 		// game title
 

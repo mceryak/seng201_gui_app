@@ -32,8 +32,6 @@ public class ItemAdded {
 
 	/**
 	 * Constructor for ItemAdded
-	 * 
-	 * @param thisFrame Frame to render on
 	 */
 	public ItemAdded() {
 

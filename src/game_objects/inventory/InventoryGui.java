@@ -94,10 +94,10 @@ public class InventoryGui {
 	}
 
 	/**
+	 * render item in the gui
 	 * 
-	 * 
-	 * @param item
-	 * @param amt
+	 * @param item Item to be rendered
+	 * @param amt  Amount of item to be rendered
 	 */
 	public void renderItem(Item item, int amt) {
 

@@ -128,6 +128,8 @@ public class SpaceOutpostMenu {
 
 	/**
 	 * add all components to the frame
+	 * 
+	 * @param frame Frame to be added to
 	 */
 	public void render(JFrame frame) {
 		for (MenuItem mi : menuItems)

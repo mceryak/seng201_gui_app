@@ -250,7 +250,7 @@ public class InventorySlot {
 	/**
 	 * let this slot know that a crew member is or is not selected
 	 * 
-	 * @param tf True -> show action label. False -> hide action label
+	 * @param tf True, show action label. If false, hide action label
 	 */
 	public void setActionAvailable(boolean tf) {
 		actionAvailable = tf;
@@ -259,7 +259,7 @@ public class InventorySlot {
 	/**
 	 * determines whether the inventory is currently open or not
 	 * 
-	 * @return true -> inventory is open. false -> inventory is not open
+	 * @return true: inventory is open. false: inventory is not open
 	 */
 	public boolean inventoryOpen() {
 		return lblQuantity.isVisible();

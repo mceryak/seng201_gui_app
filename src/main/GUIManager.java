@@ -11,7 +11,6 @@ import game_objects.actions.UseItem;
 import main.GUIGame.DayWindow;
 import main.GUIPregame.DaysNameSizeWindow;
 import main.GUIPregame.PickCrewMembersWindow;
-import main.GUIPregame.RulesWindow;
 import main.GUIPregame.StartWindow;
 
 /**
@@ -63,28 +62,8 @@ public class GUIManager {
 	 * @param sm StartWindow that was open
 	 */
 	public void closeStartWindow(StartWindow sm) {
-		if (sm.closeWindow() == 1)
-			launchRulesWindow();
-		else
-			launchDaysNameSizeWindow();
-
-	}
-
-	/**
-	 * Launch Rules Window
-	 */
-	public void launchRulesWindow() {
-		new RulesWindow(this);
-	}
-
-	/**
-	 * Close rules window and go back to start window
-	 * 
-	 * @param rw RulesWindow that was open
-	 */
-	public void closeRulesWindow(RulesWindow rw) {
-		rw.closeWindow();
-		launchStartWindow();
+		sm.closeWindow();
+		launchDaysNameSizeWindow();
 	}
 
 	/**

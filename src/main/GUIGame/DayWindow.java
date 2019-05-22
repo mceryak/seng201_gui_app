@@ -29,7 +29,7 @@ import random_events.CreateRandomEvent;
  */
 public class DayWindow {
 
-	/** number of crew members that have > 0 actions remaining */
+	/** number of crew members that have more than 0 actions remaining */
 	public static int haveActions;
 
 	/** set of pilots for the current day */
