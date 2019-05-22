@@ -18,6 +18,7 @@ To run:
 - all crew members have 0 health
 - spacebus shield health = 0
 - all missing pieces are found
+- reached last day and clicked 'next day' button
 10. Scoring:
 - Loss -> score of 0
 - Win -> extra days, smaller crew size, higher spacebus shield health, more living crew members all contribute to a higher score
