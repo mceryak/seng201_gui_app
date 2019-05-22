@@ -31,7 +31,6 @@ public class PiecesLeft {
 	}
 
 	public void render(JFrame frame) {
-		System.out.println("pieces left: " + piecesLeft);
 		int startX = frame.getWidth() - 180 - 45 * piecesLeft;
 		for (int i = 0; i < piecesLeft; i++) {
 			JLabel piece = missingPieces[i];

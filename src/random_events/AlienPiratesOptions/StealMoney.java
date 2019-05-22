@@ -1,7 +1,5 @@
 package random_events.AlienPiratesOptions;
 
-import javax.swing.SwingUtilities;
-
 import game_objects.inventory.Inventory;
 
 /**
@@ -20,7 +18,6 @@ public class StealMoney {
 	 */
 	public String steal(Inventory inventory) {
 
-		System.out.println("day window initialize: " + SwingUtilities.isEventDispatchThread());
 		// get crew's balance
 		int balance = inventory.getCCAmount();
 
@@ -35,6 +32,7 @@ public class StealMoney {
 
 			// remove amount from balance and report balance
 			inventory.modifyCCAmount(-amt);
+			inventory.getGui().modifyCC(-amt);
 
 			return amt + " gold";
 

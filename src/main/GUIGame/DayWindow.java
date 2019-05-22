@@ -87,8 +87,6 @@ public class DayWindow {
 	 */
 	private void initialize() {
 
-//		System.out.println("day window initialize: " + SwingUtilities.isEventDispatchThread());
-
 		// frame
 
 		frame = new JFrame();
@@ -149,7 +147,6 @@ public class DayWindow {
 				// check if game is over
 				int numAlive = crew.numAlive();
 				if (numAlive == 0 || curDay > lastDay || crew.getShip().getShieldHealth() == 0) {
-					System.out.println("here");
 					btnNextDay.setEnabled(false);
 					if (numAlive == 0)
 						StoryLine.updateLabel("The rest of your crew died over night");

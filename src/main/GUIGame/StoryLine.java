@@ -98,8 +98,13 @@ public class StoryLine {
 				String[] ret;
 				try {
 					ret = get();
-					line1.setText(ret[0]);
-					line2.setText(ret[1]);
+					try {
+						line1.setText(ret[0]);
+						line2.setText(ret[1]);
+					} catch (NullPointerException e) {
+						System.out.println("null b/c test");
+					}
+
 				} catch (InterruptedException | ExecutionException e) {
 					e.printStackTrace();
 				}

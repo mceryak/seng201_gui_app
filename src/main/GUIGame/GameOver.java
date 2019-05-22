@@ -105,7 +105,8 @@ public class GameOver {
 		if (didWin) {
 			lblWL.setText("You win! You found all missing pieces of " + shipName + " in " + daysTaken + " days");
 		} else {
-			lblWL.setText("You lose! You did not find all pieces of " + shipName + " after " + daysTaken + " days");
+			lblWL.setText("You lose! You're missing " + crew.getShip().getMissingPieces() + " pieces of " + shipName
+					+ " after " + daysTaken + " days");
 
 		}
 
