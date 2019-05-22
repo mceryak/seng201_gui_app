@@ -3,7 +3,8 @@
 
 To run: 
   1. Download zip file
-  2. go to project folder in command line and type: `java -jar 41786758_63909655_SpaceExplorer.jar`
+  2. Make sure Java version is at least 10
+  3. go to project folder in command line and type: `java -jar 41786758_63909655_SpaceExplorer.jar`
 
 ## Rules
 1. Choose number of days to play for, size of your crew, name of your crew, name of your spacebus
