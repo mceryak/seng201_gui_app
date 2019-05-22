@@ -10,7 +10,6 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingWorker;
 
-import game_objects.CartmanCoin;
 import game_objects.Item;
 import main.GUIGame.DayWindow;
 
@@ -168,11 +167,10 @@ public class InventoryGui {
 
 	/**
 	 * show new cartman-coin quantity in gui
-	 * 
-	 * @param cc  CartmanCoin object from inventory
+	 *
 	 * @param amt positive/negative amount to add to quantity
 	 */
-	public void modifyCC(CartmanCoin cc, int amt) {
+	public void modifyCC(int amt) {
 		slots[9].modifyQuantity(amt);
 	}
 

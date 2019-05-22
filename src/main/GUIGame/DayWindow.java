@@ -196,6 +196,7 @@ public class DayWindow {
 		if (curDay % 2 == 0 && crew.getAbilityIdentifiers().contains(Chef.abilityIdentifier)) {
 			FoodItem f = FoodItem.allFoods[(int) (Math.random() * 6)];
 			crew.getInventory().addItem(f);
+			crew.getInventory().getGui().renderItem(f, 1);
 		}
 
 		// background design

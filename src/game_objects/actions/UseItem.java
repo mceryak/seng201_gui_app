@@ -48,6 +48,7 @@ public class UseItem extends Action {
 					super.performAction(cm);
 					Item item = slot.getItem();
 					inventory.removeItem(item);
+					inventory.getGui().removeOne(item);
 					if (item instanceof FoodItem) {
 						cm.eatFood((FoodItem) item);
 					} else {

@@ -25,7 +25,11 @@ public class StealHealing {
 			Object[] meds = medMap.keySet().toArray();
 			MedicalItem stolenMed = (MedicalItem) meds[(int) (Math.random() * medMap.size())];
 			inventory.removeItem(stolenMed);
-			System.out.println("They got away with 1 " + stolenMed.getName());
+			try {
+				inventory.getGui().removeOne(stolenMed);
+			} catch (NullPointerException e) {
+				System.out.println("null b/c test");
+			}
 			return "-1 " + stolenMed.getName();
 		} else {
 			return "";

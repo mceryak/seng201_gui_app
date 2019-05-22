@@ -6,7 +6,6 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.SwingUtilities;
 import javax.swing.Timer;
 
 import game_objects.Item;
@@ -41,8 +40,6 @@ public class ItemAdded {
 		offscreenx = 1200;
 		onscreenx = 1100;
 
-		System.out.println("item added: " + SwingUtilities.isEventDispatchThread());
-
 		amt = new JLabel("");
 		amt.setBounds(offscreenx, 110, 110, 60); // start off screen
 		amt.setFont(new Font("Krungthep", Font.PLAIN, 15));
@@ -64,8 +61,6 @@ public class ItemAdded {
 	 * @param amount Quantity of item
 	 */
 	public void setNewItem(Item item, int amount) {
-
-		System.out.println("added " + item.getName());
 
 		icon.setIcon(item.getIcon());
 		amt.setText((amount > 0 ? "+" : "") + amount);

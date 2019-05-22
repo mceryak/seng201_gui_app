@@ -123,6 +123,8 @@ public class MenuItem {
 			public void mouseClicked(MouseEvent e) { // buy the item if affordable
 				if (inventory.getCCAmount() >= price && quantity > 0) {
 					inventory.addItem(item, price);
+					inventory.getGui().renderItem(item, 1);
+					inventory.getGui().modifyCC(-price);
 					lblQuantity.setText("" + --quantity);
 				}
 			}

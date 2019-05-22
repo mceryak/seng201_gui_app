@@ -25,7 +25,11 @@ public class StealFood {
 			Object[] foods = foodMap.keySet().toArray();
 			FoodItem stolenFood = (FoodItem) foods[(int) (Math.random() * foodMap.size())];
 			inventory.removeItem(stolenFood);
-			System.out.println("They got away with 1 " + stolenFood.getName());
+			try {
+				inventory.getGui().removeOne(stolenFood);
+			} catch (NullPointerException e) {
+				System.out.println("null b/c test");
+			}
 			return "-1 " + stolenFood.getName();
 		} else { // crew has no food, try other option
 			return "";

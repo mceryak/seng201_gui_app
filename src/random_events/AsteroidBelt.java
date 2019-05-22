@@ -22,7 +22,7 @@ public class AsteroidBelt implements RandomEvent {
 		damage = damage > 25 ? damage : 25;
 		damage = ship.takeDamage(damage);
 
-		return "Your spacebus flew into an asteroid belt last night. ! Shields have taken " + damage + " damage. ";
+		return "Your spacebus flew into an asteroid belt last night! Shields have taken " + damage + " damage.";
 
 	}
 

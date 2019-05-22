@@ -72,6 +72,7 @@ public class SearchPlanet extends Action {
 					// P(10) = 4/7. P(20) = 2/7. P(30) = 1/7
 					int[] ccProbabilities = new int[] { 10, 10, 10, 10, 20, 20, 30 };
 					int amt = ccProbabilities[(int) (Math.random() * 6)];
+					crew.getInventory().modifyCCAmount(amt);
 					return new Integer[] { amt };
 
 				case 1:
@@ -79,6 +80,7 @@ public class SearchPlanet extends Action {
 					// found food item
 
 					randIndex = (int) (Math.random() * 6);
+					crew.getInventory().addItem(FoodItem.allFoods[randIndex]);
 					return new Integer[] { 1, randIndex };
 
 				case 2:
@@ -86,6 +88,7 @@ public class SearchPlanet extends Action {
 					// found medical item
 
 					randIndex = (int) (Math.random() * 3);
+					crew.getInventory().addItem(MedicalItem.allMeds[randIndex]);
 					return new Integer[] { 2, randIndex };
 
 				case 3:
@@ -112,11 +115,11 @@ public class SearchPlanet extends Action {
 					switch (ret[0]) {
 					case 1: // found food item
 						StoryLine.updateLabel(c.getName() + " found " + FoodItem.allFoods[ret[1]].getName());
-						crew.getInventory().addItem(FoodItem.allFoods[ret[1]]);
+						crew.getInventory().getGui().renderItem(FoodItem.allFoods[ret[1]], 1);
 						break;
 					case 2: // found medical item
 						StoryLine.updateLabel(c.getName() + " found " + MedicalItem.allMeds[ret[1]].getName());
-						crew.getInventory().addItem(MedicalItem.allMeds[ret[1]]);
+						crew.getInventory().getGui().renderItem(MedicalItem.allMeds[ret[1]], 1);
 						break;
 					case 3: // found nothing
 						StoryLine.updateLabel(
@@ -131,7 +134,7 @@ public class SearchPlanet extends Action {
 					case 20: // found 20 cartman-coins
 					case 30: // found 30 cartman-coins
 						StoryLine.updateLabel(c.getName() + " found " + ret[0] + " Cartman-coins!");
-						crew.getInventory().modifyCCAmount(ret[0]);
+						crew.getInventory().getGui().modifyCC(ret[0]);
 					}
 				} catch (InterruptedException | ExecutionException e) {
 					e.printStackTrace();

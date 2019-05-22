@@ -2,8 +2,6 @@ package game_objects.inventory;
 
 import java.util.HashMap;
 
-import javax.swing.SwingWorker;
-
 import game_objects.CartmanCoin;
 import game_objects.FoodItem;
 import game_objects.Item;
@@ -67,9 +65,6 @@ public class Inventory {
 
 		// change actual value
 		cartmanCoin.modifyAmount(mod);
-
-		// show change in gui
-		gui.modifyCC(cartmanCoin, mod);
 	}
 
 	/**
@@ -85,41 +80,21 @@ public class Inventory {
 	 * @param item Item to be added
 	 */
 	public void addItem(Item item) {
-		SwingWorker<Void, Void> bgThread = new SwingWorker<>() {
 
-			/**
-			 * put item in inventory
-			 * 
-			 * @return null
-			 * @throws Exception
-			 */
-			@Override
-			protected Void doInBackground() throws Exception { // run in background thread
-				if (item instanceof MedicalItem) {
-					if (medMap.containsKey(item)) { // item already exists, so increment quantity
-						medMap.put((MedicalItem) item, medMap.get(item) + 1);
-					} else { // item does not exist in inventory
-						medMap.put((MedicalItem) item, 1);
-					}
-				} else {
-					if (foodMap.containsKey(item)) { // item already exists, so increment quantity
-						foodMap.put((FoodItem) item, foodMap.get(item) + 1);
-					} else { // item does not exist in inventory
-						foodMap.put((FoodItem) item, 1);
-					}
-				}
-				return null;
+		if (item instanceof MedicalItem) {
+			if (medMap.containsKey(item)) { // item already exists, so increment quantity
+				medMap.put((MedicalItem) item, medMap.get(item) + 1);
+			} else { // item does not exist in inventory
+				medMap.put((MedicalItem) item, 1);
 			}
+		} else {
+			if (foodMap.containsKey(item)) { // item already exists, so increment quantity
+				foodMap.put((FoodItem) item, foodMap.get(item) + 1);
+			} else { // item does not exist in inventory
+				foodMap.put((FoodItem) item, 1);
+			}
+		}
 
-			/**
-			 * show item in gui
-			 */
-			@Override
-			protected void done() {
-				gui.renderItem(item, 1);
-			}
-		};
-		bgThread.execute();
 	}
 
 	/**
@@ -128,9 +103,6 @@ public class Inventory {
 	 * @param item Item to be removed
 	 */
 	public void removeItem(Item item) {
-
-		// show change in gui
-		gui.removeOne(item);
 
 		if (item instanceof FoodItem) {
 			FoodItem food = (FoodItem) item;
@@ -160,41 +132,20 @@ public class Inventory {
 	 */
 	public void addItem(Item item, int price) {
 
-		SwingWorker<Void, Void> bgThread = new SwingWorker<>() {
-
-			/**
-			 * put item in inventory
-			 * 
-			 * @return null
-			 * @throws Exception
-			 */
-			@Override
-			protected Void doInBackground() throws Exception { // run background thread
-				if (item instanceof MedicalItem) {
-					if (medMap.containsKey(item)) { // item already exists, so increment quantity
-						medMap.put((MedicalItem) item, medMap.get(item) + 1);
-					} else { // item doesn't exist yet
-						medMap.put((MedicalItem) item, 1);
-					}
-				} else {
-					if (foodMap.containsKey(item)) { // item already exists, so increment quantity
-						foodMap.put((FoodItem) item, foodMap.get(item) + 1);
-					} else { // item doesn't exist yet
-						foodMap.put((FoodItem) item, 1);
-					}
-				}
-				return null;
+		if (item instanceof MedicalItem) {
+			if (medMap.containsKey(item)) { // item already exists, so increment quantity
+				medMap.put((MedicalItem) item, medMap.get(item) + 1);
+			} else { // item doesn't exist yet
+				medMap.put((MedicalItem) item, 1);
 			}
-
-			/**
-			 * show changes in gui
-			 */
-			@Override
-			protected void done() {
-				modifyCCAmount(-price);
-				gui.renderItem(item, 1);
+		} else {
+			if (foodMap.containsKey(item)) { // item already exists, so increment quantity
+				foodMap.put((FoodItem) item, foodMap.get(item) + 1);
+			} else { // item doesn't exist yet
+				foodMap.put((FoodItem) item, 1);
 			}
-		};
-		bgThread.execute();
+		}
+		modifyCCAmount(-price);
 	}
+
 }
