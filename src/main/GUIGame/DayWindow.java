@@ -29,10 +29,10 @@ import random_events.CreateRandomEvent;
  */
 public class DayWindow {
 
-	// number of crew members that have > 0 actions remaining
+	/** number of crew members that have > 0 actions remaining */
 	public static int haveActions;
 
-	// set of pilots for the current day
+	/** set of pilots for the current day */
 	public static HashSet<CrewMember> pilots;
 
 	// frame being rendered
@@ -203,6 +203,8 @@ public class DayWindow {
 	}
 
 	/**
+	 * close the window
+	 * 
 	 * @return Integer determining whether game is still going or game is over and
 	 *         player wants to play again (0 or 1, respectively).
 	 */
