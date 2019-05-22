@@ -1,4 +1,5 @@
 # Space Explorer (South Park Edition)
+*All drawings were created by us. Ideas for drawings belong to South Park*
 
 To run: 
   1. Download zip file
