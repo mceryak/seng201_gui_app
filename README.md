@@ -1,6 +1,13 @@
 # Space Explorer (South Park Edition)
 *All drawings were created by us. Ideas for drawings belong to South Park*
 
+To open project in Eclipse:
+  1. Open Eclipse
+  2. File -> New -> Java Project
+  3. Give the project a name 
+  4. Uncheck 'Use default location'
+  4. Browse for location of where you unzipped the project and choose that folder
+
 To run: 
   1. Download zip file
   2. Make sure Java version is at least 10
